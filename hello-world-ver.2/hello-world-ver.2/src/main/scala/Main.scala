@@ -1,5 +1,6 @@
 object Main extends App {
-  println("Hello, World!")
+  val x: Int = 1
+  println(x)
   println("안녕")
   println("반가워요!")
 }
