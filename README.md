@@ -52,3 +52,21 @@ javac과 같은 바이트코드로 컴파일되고 JVM내에서 실행 가능
 2. `sbt`를 입력하면 sbt console로 진입할 수 있음
 3. `~run`입력.  
    그럼 sbt서버가 알아서 컴파일해서 실행시켜줌
+
+## 사칙연산
+
+```scala
+object Main extends App {
+  val x: Int = 4
+  val y: Int = 2
+  println((x).+(y))
+  println(x + y)
+  println(x + (x + y)./(y))
+}
+```
+
+스칼라는 Int와 같은 원시타입을 객체로 취급함  
+그래서 사실상 변수 x도 객체!  
+그래서 `(x).+(y)`라는 식은 x라는 객체에서 +라는 함수를 불러오고 인자로 y를 넣겠다는 의미와 같음  
+물론 그냥 `x + y`라 해도 됨  
+개념을 잘 알아둬야 할 듯!
