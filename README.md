@@ -55,6 +55,8 @@ javac과 같은 바이트코드로 컴파일되고 JVM내에서 실행 가능
 
 ## 사칙연산
 
+변수는 `var` 상수는 `val`로 선언
+
 ```scala
 object Main extends App {
   val x: Int = 4
@@ -70,3 +72,19 @@ object Main extends App {
 그래서 `(x).+(y)`라는 식은 x라는 객체에서 +라는 함수를 불러오고 인자로 y를 넣겠다는 의미와 같음  
 물론 그냥 `x + y`라 해도 됨  
 개념을 잘 알아둬야 할 듯!
+
+## 프린트
+
+```scala
+object Main extends App {
+  val x = 10
+  val y = 1
+
+  println("1. " + x + "은 " + y + "보다 크다!")
+  println(s"2. $x 은 $y 보다 크다!")
+  println(s"3. $x + $y = ${x + y}")
+  println(s"4. PI는 ${Math.PI}")
+}
+```
+
+앞에 s를 붙이면 $로 중간에 변수 삽입 가능 굿
